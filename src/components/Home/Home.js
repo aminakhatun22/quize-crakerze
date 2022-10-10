@@ -37,37 +37,78 @@ const Home = () => {
                 <div className='bg-red-200'>
                     <img src={topics.data[0].logo} alt="" ></img>
 
-                    <p>{topics.data[0].name}</p>
-                    <p>Total question:{topics.data[0].total}</p>
-                    <button>Start Quiz</button>
+                    <div className='flex gap-5 mt-3 p-3'>
+                        <div>
+                            <p className='ml-2'>{topics.data[0].name}</p>
+
+                        </div>
+                        <div>
+                            <p>Total question:{topics.data[0].total}</p>
+                        </div>
+                        <div>
+                            <button className='bg-blue-500 rounded-xl p-2 mb-2'>Start Quiz</button>
+                        </div>
+                    </div>
+
+
                 </div>
 
 
 
                 <div className='bg-yellow-200'>
                     <img src={topics.data[1].logo} alt="" ></img>
+                    <div className='flex gap-5 mt-3 p-3'>
+                        <div>
+                            <p className='ml-2'> Name:{topics.data[1].name}</p>
+                        </div>
+                        <div>
+                            <p>Total question:{topics.data[1].total}</p>
+                        </div>
+                        <div>
+                            <button className='bg-blue-500 rounded-xl p-2 mb-2'>Start Quiz</button>
+                        </div>
+                    </div>
 
-                    <p>{topics.data[1].name}</p>
-                    <p>Total question:{topics.data[1].total}</p>
-                    <button>Start Quiz</button>
+
+
                 </div>
 
 
                 <div className='bg-yellow-200'>
                     <img src={topics.data[2].logo} alt="" ></img>
+                    <div className='flex gap-5 mt-3 p-3'>
+                        <div>
+                            <p>{topics.data[2].name}</p>
+                        </div>
+                        <div>
+                            <p>Total question:{topics.data[2].total}</p>
+                        </div>
+                        <div>
+                            <button className='bg-blue-500 rounded-xl p-2 mb-2'>Start Quiz</button>
+                        </div>
+                    </div>
 
-                    <p>{topics.data[2].name}</p>
-                    <p>Total question:{topics.data[2].total}</p>
-                    <button>Start Quiz</button>
+
+
                 </div>
 
 
                 <div className='bg-blue-200'>
                     <img src={topics.data[3].logo} alt="" ></img>
 
-                    <p>{topics.data[3].name}</p>
-                    <p>Total question:{topics.data[3].total}</p>
-                    <button>Start Quiz</button>
+                    <div className='flex gap-5 mt-3 p-3'>
+                        <div>
+                            <p>{topics.data[3].name}</p>
+                        </div>
+                        <div>
+                            <p>Total question:{topics.data[3].total}</p>
+                        </div>
+                        <div>
+                            <button className='bg-blue-500 rounded-xl p-2 mb-2'>Start Quiz</button>
+                        </div>
+                    </div>
+
+
                 </div>
             </section>
         </div>
