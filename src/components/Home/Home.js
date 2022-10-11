@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link, useLoaderData } from "react-router-dom";
 
-// import freePik from "./src/assets/Quiz.jpg";
+
 import freePik from '../../assets/Quiz.jpg'
+
 import Topics from '../Topics/Topics';
 
 const Home = () => {
     const topics = useLoaderData();
-    console.log(topics)
+
 
 
     return (
@@ -37,7 +38,7 @@ const Home = () => {
 
 
 
-            <section className=' ml-36 grid grid-cols-2 gap-5 mr-36 p-12'>
+            {/* <section className=' ml-36 grid grid-cols-2 gap-5 mr-36 p-12'>
                 <div className='bg-red-200'>
                     <img src={topics.data[0].logo} alt="" ></img>
 
@@ -152,11 +153,13 @@ const Home = () => {
 
 
                 </div>
-            </section>
+            </section> */}
             {/* {
                 topics.map(topic => <Topics key={topic.id}
                     topic={topic}></Topics>)
             } */}
+
+            <Topics></Topics>
         </div>
     );
 };

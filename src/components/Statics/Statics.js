@@ -1,25 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar } from 'recharts';
+import { useLoaderData } from 'react-router-dom';
+
+
 const Statics = () => {
-
-    const [data, setData] = useState([]);
-
-
-    useEffect(async () => {
-        const result = await fetch(
-            'https://openapi.programming-hero.com/api/quiz',
-        );
-
-        setData(result.data);
-    });
-
+    const topic = useLoaderData();
     return (
         <div>
-
-            <LineChart width={500} height={400} data={setData}
-            >
-                <Line type="monotone" dataKey="total" stroke="#82ca9d" />
-            </LineChart>
+            this is recharts
+            <BarChart width={730} height={250} data={topic}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="total" fill="#8884d8" />
+            </BarChart>
         </div>
     );
 };
