@@ -4,10 +4,12 @@ import { useLoaderData } from 'react-router-dom';
 
 
 const Statics = () => {
-    const topic = useLoaderData();
+    const topic = useLoaderData().data;
+    console.log(topic)
+
     return (
-        <div>
-            this is recharts
+        <div className='ml-72 mt-12 p-5'>
+
             <BarChart width={730} height={250} data={topic}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
