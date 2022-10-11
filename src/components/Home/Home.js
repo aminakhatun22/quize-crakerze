@@ -1,18 +1,22 @@
 import React from 'react';
 import { Link, useLoaderData } from "react-router-dom";
+
 // import freePik from "./src/assets/Quiz.jpg";
 import freePik from '../../assets/Quiz.jpg'
+import Topics from '../Topics/Topics';
 
 const Home = () => {
     const topics = useLoaderData();
     console.log(topics)
+
+
     return (
         <div>
 
             <section className='mb-24'>
-                <div className="bg-gray-100">
+                <div className="">
                     <div className="container flex flex-col items-center px-4 py-16 pb-24 mx-auto text-center lg:pb-56 md:py-32 md:px-10 lg:px-32 text-gray-900">
-                        <h1 className="text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl text-gray-800">
+                        <h1 className="text-5xl font-bold leading-none sm:text-6xl xl:max-w-3xl text-blue-800">
                             Welcome To Quizzically Challanged
                         </h1>
                         <p className="mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl text-gray-900">
@@ -43,10 +47,19 @@ const Home = () => {
 
                         </div>
                         <div>
-                            <p>Total question:{topics.data[0].total}</p>
+                            <p>Total question: {topics.data[0].total}</p>
                         </div>
                         <div>
-                            <button className='bg-blue-500 rounded-xl p-2 mb-2'>Start Quiz</button>
+
+
+                            <Link to="/topics">
+                                <button
+                                    type="button"
+                                    className="px-8 py-3 mb-16 text-lg font-semibold rounded-full  text-gray-900 hover:bg-cyan-400 bg-cyan-200"
+                                >
+                                    Start Quiz
+                                </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -59,13 +72,24 @@ const Home = () => {
                     <img src={topics.data[1].logo} alt="" ></img>
                     <div className='flex gap-5 mt-3 p-3'>
                         <div>
-                            <p className='ml-2'> Name:{topics.data[1].name}</p>
+                            <p className='ml-2'> {topics.data[1].name}</p>
                         </div>
                         <div>
-                            <p>Total question:{topics.data[1].total}</p>
+                            <p>Total question: {topics.data[1].total}</p>
                         </div>
                         <div>
-                            <button className='bg-blue-500 rounded-xl p-2 mb-2'>Start Quiz</button>
+
+
+                            <Link to="/topics">
+                                <button
+                                    type="button"
+                                    className="px-8 py-3 mb-16 text-lg font-semibold rounded-full  text-gray-900 hover:bg-cyan-400 bg-cyan-200"
+                                >
+                                    Start Quiz
+                                </button>
+                            </Link>
+
+
                         </div>
                     </div>
 
@@ -81,10 +105,19 @@ const Home = () => {
                             <p>{topics.data[2].name}</p>
                         </div>
                         <div>
-                            <p>Total question:{topics.data[2].total}</p>
+                            <p>Total question: {topics.data[2].total}</p>
                         </div>
                         <div>
-                            <button className='bg-blue-500 rounded-xl p-2 mb-2'>Start Quiz</button>
+
+
+                            <Link to="/topics">
+                                <button
+                                    type="button"
+                                    className="px-8 py-3 mb-16 text-lg font-semibold rounded-full  text-gray-900 hover:bg-cyan-400 bg-cyan-200"
+                                >
+                                    Start Quiz
+                                </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -93,7 +126,7 @@ const Home = () => {
                 </div>
 
 
-                <div className='bg-blue-200'>
+                <div className='bg-blue-500'>
                     <img src={topics.data[3].logo} alt="" ></img>
 
                     <div className='flex gap-5 mt-3 p-3'>
@@ -101,16 +134,29 @@ const Home = () => {
                             <p>{topics.data[3].name}</p>
                         </div>
                         <div>
-                            <p>Total question:{topics.data[3].total}</p>
+                            <p>Total question: {topics.data[3].total}</p>
                         </div>
                         <div>
-                            <button className='bg-blue-500 rounded-xl p-2 mb-2'>Start Quiz</button>
+
+
+                            <Link to="/topics">
+                                <button
+                                    type="button"
+                                    className="px-8 py-3 mb-16 text-lg font-semibold rounded-full  text-gray-900 hover:bg-cyan-400 bg-cyan-200"
+                                >
+                                    Start Quiz
+                                </button>
+                            </Link>
                         </div>
                     </div>
 
 
                 </div>
             </section>
+            {/* {
+                topics.map(topic => <Topics key={topic.id}
+                    topic={topic}></Topics>)
+            } */}
         </div>
     );
 };
