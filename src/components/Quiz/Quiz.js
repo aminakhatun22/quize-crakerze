@@ -40,7 +40,7 @@ const Quiz = ({ questions }) => {
                 )}
             </div>
 
-
+            <ToastContainer />
 
         </div>
     );
