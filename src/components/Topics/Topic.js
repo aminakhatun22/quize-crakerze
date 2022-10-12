@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Topic = ({ topic }) => {
     return (
-        <div className='bg-red-200'>
+        <div className='bg-red-200 '>
             <img src={topic.logo} alt="" ></img>
 
             <div className='flex gap-5 mt-3 p-3'>
