@@ -12,6 +12,7 @@ const SingleTopic = () => {
         <div>
             {
                 quiz.map(questions => <Quiz key={questions.id}
+                    id={questions.id}
                     questions={questions}></Quiz>)
             }
         </div>

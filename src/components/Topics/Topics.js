@@ -9,7 +9,7 @@ const Topics = () => {
 
 
     return (
-        <div className=' ml-36 grid lg:grid-cols-2 sm:grid-cols-1  gap-5 mr-36 p-12'>
+        <div className='  grid lg:grid-cols-2  sm:grid-cols-1  gap-5 lg:mr-36 lg:ml-36   p-12'>
             {
                 topics.map(topic => <Topic
                     key={topic.id}
